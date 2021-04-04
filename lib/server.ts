@@ -1,8 +1,8 @@
 import app from "./config/app";
 import env from "./environment"
 
-const PORT = env.getPort();
-app.listen(process.env.PORT || PORT, () => {
-   console.log('Express server listening on port ' + PORT);
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+   console.log('Express server listening on port ' + port);
 })
 
